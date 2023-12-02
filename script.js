@@ -49,6 +49,18 @@ function store(e){
         axios.delete(`https://crudcrud.com/api/b22f6ecc7bc4419aa2d5e8a52b7945b0/appointmentData/${obj._id}`)
       parentElement.removeChild(childElement);
     }
+
+    const edt = document.createElement("input");
+    edt.type = "button";
+    edt.value = "edit";
+    childElement.appendChild(edt);
+    edt.onclick=function(){
+        axios.delete(`https://crudcrud.com/api/b22f6ecc7bc4419aa2d5e8a52b7945b0/appointmentData/${obj._id}`)
+      parentElement.removeChild(childElement);
+      document.getElementById('firstname').value=obj.Name;
+    document.getElementById('email').value=obj.Email_id;
+    document.getElementById('phno').value=obj.Phone_number;
+    }
   }
   
   
